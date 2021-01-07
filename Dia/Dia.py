@@ -1,0 +1,47 @@
+import numpy as np
+import matplotlib
+import matplotlib.pyplot as plt
+
+x1 = np.linspace(-9, -1) 
+y1=(-(1/8)*((x1+9)**2)+8)
+x2= np.linspace(1, 9) 
+y2=(-(1/8)*((x2-9)**2)+8)
+x3 = np.linspace(-9, -8) 
+y3=(7*((x3+8)**2)+1)
+x4 = np.linspace(8,9) 
+y4=(7*((x4-8)**2)+1)
+x5 = np.linspace(-8, -1) 
+y5=((1/49)*((x5+1)**2))
+x6 = np.linspace(1, 8) 
+y6=((1/49)*((x6-1)**2))
+x7 = np.linspace(-8, -1) 
+y7=(-(4/49)*((x7+1)**2))
+x8 = np.linspace(1, 8) 
+y8=(-(4/49)*((x8-1)**2))
+x9 = np.linspace(-8, -2) 
+y9=((1/3)*((x9+5)**2)-7)
+x10 = np.linspace(2, 8) 
+y10=((1/3)*((x10-5)**2)-7)
+x11 = np.linspace(-2, -1) 
+y11=((-2)*((x11+1)**2)-2)
+x12 = np.linspace(1, 2) 
+y12=((-2)*((x12-1)**2)-2)
+x13 = np.linspace(-1, 1) 
+y13=((-4*x13**2)+2)
+x14 = np.linspace(1, -1) 
+y14=((4*x14**2)-6)
+x15 = np.linspace(-2, 0) 
+y15=((-1.5*x15)+2)
+x16 = np.linspace(0, 2) 
+y16=((1.5*x16)+2)
+plt.subplots()
+plt.title("Бабочка")
+plt.xlabel("Ось абсцисс")
+plt.ylabel("Ось ординат")
+plt.grid(True)# Отображение сетки на координатной плоскости
+plt.plot(x1,y1,x2,y2,x3,y3,x4,y4,x5,y5,x6,y6,x7,y7,x8,y8,x9,y9,x10,y10,x11,y11,x12,y12,x13,y13,x14,y14,x15,y15,x16,y16)
+plt.legend(('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16'))
+plt.text(-7, 24.5, "На диаграмме Бабочка")
+plt.savefig("my_image.png")  # Сохранение изображения или
+plt.show()  # Вывод изображения на экран
+
